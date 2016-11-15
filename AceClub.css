@@ -23,6 +23,6 @@ li a {
     cursor: pointer;
 }
 
-li, link a:hover{
+li a:hover{
   background-color: #FAEBD7;
 }
