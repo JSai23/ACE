@@ -26,3 +26,11 @@ li a {
 li a:hover{
   background-color: #FAEBD7;
 }
+
+.home{
+  display: none;
+}
+
+.hbut{
+  display: block;
+}
