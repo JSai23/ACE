@@ -13,20 +13,7 @@ ul {
 
 }
 
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a, .hbut {
+li a, .but {
     display: inline-block;
     color: white;
     text-align: center;
@@ -34,15 +21,15 @@ li a, .hbut {
     text-decoration: none;
 }
 
-li a:hover, .home:hover .hbut {
+li a:hover, .nav:hover .but {
     background-color: red;
 }
 
-li.home {
+li.nav {
     display: inline-block;
 }
 
-.dropcon-home {
+.dropcon {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -50,7 +37,7 @@ li.home {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropcon-home a {
+.dropcon a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -58,8 +45,8 @@ li.home {
     text-align: left;
 }
 
-.dropcon-home a:hover {background-color: #f1f1f1}
+.dropcon a:hover {background-color: #f1f1f1}
 
-.home:hover .dropcon-home {
+.nav:hover .dropcon {
     display: block;
 }
