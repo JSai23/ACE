@@ -9,7 +9,7 @@ ul {
     overflow: hidden;
     background: navy;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
