@@ -37,11 +37,11 @@ h1{
   top: 5px;
 }
 //NAV BAR CODE
-li{
+li.nav{
   display: inline;
   float: left;
 }
-ul {
+ul.full-nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
