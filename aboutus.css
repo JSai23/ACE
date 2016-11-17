@@ -40,12 +40,15 @@ h1{
   text-align: center;
 }
 video{
-  width:700px;
+  width:1200px;
   height:500px;
   position: relative;
-  left: 120px;
-  padding-right: 200px;
-  padding-left: 200px;
+  left: 60px;
+  margin: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   background-color: lightgreen;
   border: 5px;
   border-color: red;
