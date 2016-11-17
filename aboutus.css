@@ -1,4 +1,6 @@
-
+body{
+  background-color: black;
+}
 .question-area{
   background-color: lightblue;
   height:300px;
@@ -6,13 +8,13 @@
 }
 
 .questions {
+  position: relative;
   text-shadow: 30px;
   font-family: cursive;
   font-size: 20px;
 }
 .answers{
   font-family: fantasy;
-
 }
 
 .iconr, .iconl{
@@ -29,7 +31,6 @@
   left:0px;
   top: 5px;
 }
-
 h1{
   margin: 0px;
   padding: 10px;
@@ -38,7 +39,16 @@ h1{
   background-color: green;
   text-align: center;
 }
-//NAV BAR CODE
+video{
+  width:700px;
+  height:500px;
+  position: relative;
+  left: 120px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: lightgreen;
+}
+// NAV BAR CODE
 li.nav{
   display: inline;
   float: left;
