@@ -2,20 +2,34 @@
 .question-area{
   background-color: lightblue;
   height:300px;
-  width:1000px;
+  width:700px;
 }
 h1{
+  padding: 10px;
   position: relative;
-  font-size: 40px;
+  font-size: 50px;
   background-color: green;
-  height:70px;
-  width: 300px;
+  text-align: center;
 
 }
 .questions {
   text-shadow: 5px;
   font-family: cursive;
   font-size: 20px;
+}
+.iconr, .iconl{
+  width: 90px;
+  z-index: 1;
+}
+.iconr{
+  position: absolute;
+  right:0px;
+  top: 30px;
+}
+.iconl{
+  position: absolute;
+  left:0px;
+  top: 30px;
 }
 //NAV BAR CODE
 li{
