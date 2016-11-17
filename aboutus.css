@@ -44,7 +44,8 @@ video{
   height:500px;
   position: relative;
   left: 120px;
-  padding: 150px;
+  padding-right: 200px;
+  padding-left: 200px;
   background-color: lightgreen;
   border: 5px;
   border-color: red;
