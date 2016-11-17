@@ -1,8 +1,32 @@
-li{
+.iconr, .iconl{
+  width: 90px;
+  z-index: 1;
+}
+.iconr{
+  position: absolute;
+  right:7px;
+  top: 5px;
+}
+.iconl{
+  position: absolute;
+  left:0px;
+  top: 5px;
+}
+
+h1{
+  margin: 0px;
+  padding: 10px;
+  position: relative;
+  font-size: 50px;
+  background-color: green;
+  text-align: center;
+}
+//NAV BAR CODE
+li.nav{
   display: inline;
   float: left;
 }
-ul {
+ul.full-nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -50,3 +74,4 @@ li.nav {
 .nav:hover .dropcon {
     display: block;
 }
+//NAV BAR CODE END
