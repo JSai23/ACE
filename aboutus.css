@@ -55,7 +55,6 @@ video{
   border-color: red;
 }
 #buttonl, #buttonr{
-  position: relative;
   width: 100%;
   height: 100%;
 }
