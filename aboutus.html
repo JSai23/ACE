@@ -53,13 +53,18 @@
         <source src= "ABOUTUS_VID.mp4" type="video/mp4">
         DOES NOT WORK
       </video>
-      <button id="button" onclick="playvid()" type="button">Play</button>
+      <button id="button" onclick="playvid()" type="button">Play Video</button>
+      <button id="button" onclick="pausevid()" type="button">Pause Video</button>
     </div>
     <script>
       var vid = document.getElementById("real_vid");
       function playvid()
       {
         vid.play();
+      }
+      function pausevid()
+      {
+        vid.pause();
       }
     </script>
     <div class = "question-area">
