@@ -73,11 +73,17 @@ video{
   top: 600px;
   position: absolute; 
 }
+.table_date{
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
 // NAV BAR CODE
 li.nav{
   display: inline;
   float: left;
 }
+.date
 ul.full-nav-list {
     list-style-type: none;
     margin: 0;
