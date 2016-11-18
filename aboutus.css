@@ -58,7 +58,7 @@ video{
   background-color: blue;
   width: 200px;
   padding: 5px;
-  margin: auto;
+  position: relative;
 }
 // NAV BAR CODE
 li.nav{
