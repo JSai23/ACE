@@ -59,7 +59,7 @@ video{
   width: 20%;
   padding: 5px;
   left: 100px;
-  position: relative; 
+  position: absolute; 
 }
 // NAV BAR CODE
 li.nav{
