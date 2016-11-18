@@ -54,8 +54,10 @@ video{
   border: 5px;
   border-color: red;
 }
-.button{
+#buttonl, #buttonr{
   position: relative;
+  width: 20px;
+  height:5px;
 }
 // NAV BAR CODE
 li.nav{
