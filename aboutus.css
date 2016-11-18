@@ -58,6 +58,13 @@ video{
   background-color: blue;
   width: 20%;
   padding: 5px;
+ }
+#buttonl{
+  left: 700px;
+  top: 1000px;
+  position: absolute; 
+}
+#buttonr{
   left: 800px;
   top: 1000px;
   position: absolute; 
