@@ -88,10 +88,29 @@ li.nav {
     display: block;
 }
 //NAV BAR CODE END
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.pic{
+	width: 600px;
+}
+
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  position: relative;
+  position: fixed;
+  right: 600px;
   margin: auto;
 }
 
@@ -103,7 +122,7 @@ li.nav {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: navy;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -123,16 +142,14 @@ li.nav {
 
 /* Caption text */
 .text {
+  color: navy;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
   text-align: center;
 }
 
 
-.active, .prev:hover, .next:hover {
+.active, .dot:hover {
   background-color: #717171;
 }
 
