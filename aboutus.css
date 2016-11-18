@@ -56,10 +56,9 @@ video{
 }
 #buttonl, #buttonr{
   background-color: blue;
-  width: 200px;
+  width: 20%;
   padding: 5px;
-  position: absolute;
-  left: 300px;
+  position: relative;
 }
 // NAV BAR CODE
 li.nav{
