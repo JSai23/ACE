@@ -55,8 +55,7 @@ video{
   border-color: red;
 }
 #buttonl, #buttonr{
-  width: 100%;
-  height: 100%;
+  background-color: green;
 }
 // NAV BAR CODE
 li.nav{
