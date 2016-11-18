@@ -3,13 +3,6 @@
   <head>
     <title> ABOUT US</title>
     <link rel="stylesheet" type="text/css" href="aboutus.css">
-    <script>
-      var vid = document.getElementsByClassName("real_vid");
-      function playvid()
-      {
-        vid.play();
-      }
-    </script>
   </head>
   <body>
     <img src= "globe-hands.png" class="iconr">
@@ -55,13 +48,20 @@
           <a href="donation.html" class = "but">Donations</a>
         </li>
     	</ul>
-    <div class ="video">
-      <video class = "real_vid" autoplay>
+    <div class="video">
+      <video class="real_vid">
         <source src= "ABOUTUS_VID.mp4" type="video/mp4">
         DOES NOT WORK
       </video>
-      <button class="button" onclick="playvid()" type="button">Play</button>
+      <button id="button" onclick="playvid()" type="button">Play</button>
     </div>
+    <script>
+      var vid = document.getElementsById("real_vid");
+      function playvid()
+      {
+        vid.play();
+      }
+    </script>
     <div class = "question-area">
       <p class = "questions"> What is Ace Club in detail and what does ACE Stand For? </p>
       <p class = "answer"> Ace Club is the Attitude Chracter and Education Club. This club helps teach <br>
