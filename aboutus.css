@@ -55,9 +55,9 @@ video{
   border-color: red;
 }
 #buttonl, #buttonr{
-  background-color: green;
+  background-color: blue;
   width: 200px;
-  padding: 100px;
+  padding: 5px;
   margin: auto;
 }
 // NAV BAR CODE
