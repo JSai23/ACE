@@ -3,9 +3,12 @@ body{
 }
 .question-area{
   background-color: lightblue;
-  height:300px;
-  width:700px;
+  height:250px;
+  width:600px;
   margin: auto;
+  right: 248px;
+  position: relative;
+  padding: 50px;
 }
 
 .questions {
@@ -61,13 +64,13 @@ video{
   color: white;
  }
 #buttonl{
-  left: 700px;
-  top: 1000px;
+  left: 400px;
+  top: 600px;
   position: absolute; 
 }
 #buttonr{
-  left: 800px;
-  top: 1000px;
+  left: 700px;
+  top: 600px;
   position: absolute; 
 }
 // NAV BAR CODE
