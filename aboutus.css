@@ -56,8 +56,8 @@ video{
 }
 #buttonl, #buttonr{
   position: relative;
-  width: 20px;
-  height:5px;
+  width: 200px;
+  height: 50px;
 }
 // NAV BAR CODE
 li.nav{
