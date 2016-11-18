@@ -5,6 +5,7 @@ body{
   background-color: lightblue;
   height:300px;
   width:700px;
+  margin: auto;
 }
 
 .questions {
