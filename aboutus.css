@@ -77,6 +77,8 @@ video{
   border: 1px;
   border-style: solid;
   border-color: black;
+  position: relative;
+  right: 400px;  
 }
 // NAV BAR CODE
 li.nav{
