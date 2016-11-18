@@ -49,14 +49,14 @@
         </li>
     	</ul>
     <div class="video">
-      <video id="real_vid">
+      <video class="real_vid">
         <source src= "ABOUTUS_VID.mp4" type="video/mp4">
         DOES NOT WORK
       </video>
       <button id="button" onclick="playvid()" type="button">Play</button>
     </div>
     <script>
-      var vid = document.getElementById("real_vid");
+      var vid = document.getElementsByClassName("real_vid");
       function playvid()
       {
         vid.play();
