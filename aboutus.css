@@ -58,7 +58,8 @@ video{
   background-color: blue;
   width: 20%;
   padding: 5px;
-  left: 100px;
+  left: 500px;
+  top: 500px;
   position: absolute; 
 }
 // NAV BAR CODE
