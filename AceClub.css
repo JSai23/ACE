@@ -1,3 +1,10 @@
+body{
+  background: url("los-angeles-streets-at-night-wallpaper-1.jpg");
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 .iconr, .iconl{
   width: 90px;
   z-index: 1;
@@ -20,12 +27,7 @@ h1{
   background-color: green;
   text-align: center;
 }
-body{
-  background: url("la-helicopter-tour-night-flight.jpg");
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
+
 // NAV BAR CODE
 li.nav{
   display: inline;
@@ -95,7 +97,7 @@ li.nav {
 
 .pic{
 	width:1200px;
-	height:550px;
+	height:500px;
 }
 
 
