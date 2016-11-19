@@ -77,14 +77,20 @@ video{
   position: absolute;
 }
 .actual_table{
-  border: 1px;
+  border: 10px;
   border-style: solid;
-  border-color: black;
+  border-color: green;
   position: relative;
   left:800px;
   bottom:300px;
   background-color: white;
-}
+  width: 20%;
+  }
+  th, td{
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+  }
 // NAV BAR CODE
 li.nav{
   display: inline;
@@ -98,8 +104,6 @@ ul.full-nav-list {
     background: navy;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
-    position:relative;
 }
 
 li a, .but {
@@ -108,8 +112,7 @@ li a, .but {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    z-index: 1;
-    position:relative;
+
 }
 
 li a:hover, .nav:hover .but {
@@ -120,9 +123,7 @@ li a:hover, .nav:hover .but {
 
 li.nav {
     display: inline-block;
-    z-index: 1;
-    position:relative;
-}
+  }
 
 .dropcon {
     display: none;
@@ -130,7 +131,6 @@ li.nav {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
 }
 
 .dropcon a {
@@ -139,19 +139,15 @@ li.nav {
     text-decoration: none;
     display: block;
     text-align: left;
-    z-index: 1;
-    position:relative;
-}
+  }
 
 .dropcon a:hover {
   background-color: #f1f1f1;
-  z-index: 1;
-  position:relative;
+
 }
 
 .nav:hover .dropcon {
     display: block;
     z-index: 1;
-    position:relative;
 }
 //NAV BAR CODE END
