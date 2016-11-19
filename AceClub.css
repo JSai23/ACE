@@ -21,7 +21,10 @@ h1{
   text-align: center;
 }
 body{
-  background-color: blue;
+  background: url("la-helicopter-tour-night-flight.jpg");
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 // NAV BAR CODE
 li.nav{
@@ -92,7 +95,7 @@ li.nav {
 
 .pic{
 	width:1200px;
-	height:600px;
+	height:550px;
 }
 
 
