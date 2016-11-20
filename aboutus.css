@@ -1,12 +1,12 @@
 body{
   background: url("Manhatan.jpg");
   background-repeat: repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 .question-area{
   background-color: lightblue;
-  height:250px;
+  height:390px;
   width:600px;
   margin: auto;
   right: 248px;
@@ -80,11 +80,11 @@ video{
   border: 10px;
   border-style: solid;
   border-color: green;
-  position: relative;
+  position: absolute;
   left:800px;
-  bottom:300px;
+  top:650px;
   background-color: white;
-  width: 20%;
+  width: 35%;
   }
   th, td{
     border: 3px;
