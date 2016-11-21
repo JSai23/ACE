@@ -1,21 +1,10 @@
 body{
-  background: url("Manhatan.jpg");
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: cover;
+background: white;
 }
 .question-area{
-  background: url("sunshine.jpg");
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  height:390px;
-  width:600px;
-  margin: auto;
-  right: 248px;
-  position: relative;
-  padding: 50px;
-  border-radius: 20px;
+background-color: lightblue;
+padding: 10px;
+text-align: center;
 }
 .jumbotron{
   top:31px;
@@ -51,14 +40,13 @@ body{
   top: 70px;
 }
 video{
-  width:870px;
-  height: 490px;
+  background: yellow;
+  width:100%;
+  height: 500px;
   position: relative;
-  left: 220px;
-  margin: 10px;
-  background-color: lightgreen;
-  border: 0px;
   border-color: blue;
+  display: block;
+  margin:auto;
 }
 #buttonl, #buttonr{
   background-color: blue;
@@ -68,11 +56,15 @@ video{
  }
 #buttonl{
   left: 400px;
-  top: 600px;
+  top: 700px;
   position: absolute;
 }
 #buttonr{
   left: 700px;
-  top: 600px;
+  top: 700px;
   position: absolute;
+}
+.mission_area{
+  background-color: orange;
+  padding: 5px;
 }
