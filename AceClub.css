@@ -4,83 +4,31 @@ body{
   background-attachment: scroll;
   background-size: cover;
 }
-
-.iconr, .iconl{
+.img-circle{
   width: 90px;
   z-index: 1;
 }
 .iconr{
   position: absolute;
   right:7px;
-  top: 5px;
+  top: 70px;
 }
 .iconl{
   position: absolute;
-  left:0px;
-  top: 5px;
+  left:7px;
+  top: 70px;
 }
-h1{
-  margin: 0px;
-  padding: 10px;
+.jumbotron{
+  top:31px;
   position: relative;
-  font-size: 50px;
-  background-color: green;
-  text-align: center;
+  background: blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(blue, lightgreen); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(blue, lightgreen); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(blue, lightgreen); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(blue, lightgreen); /* Standard syntax */
 }
 
-// NAV BAR CODE
-li.nav{
-  display: inline;
-  float: left;
-}
-ul.full-nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: navy;
-    display: flex;
-    justify-content: space-between;
 
-}
-
-li a, .but {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .nav:hover .but {
-    background-color: red;
-}
-
-li.nav {
-    display: inline-block;
-}
-
-.dropcon {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropcon a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropcon a:hover {background-color: #f1f1f1}
-
-.nav:hover .dropcon {
-    display: block;
-}
 /*NAV BAR CODE END*/
 
 /* The dots/bullets/indicators */
@@ -153,12 +101,7 @@ li.nav {
 }
 
 /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
