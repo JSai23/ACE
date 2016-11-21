@@ -2,52 +2,59 @@
 <html>
   <head>
     <title> ABOUT US</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="aboutus.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <img src= "globe-hands.png" class="iconr">
-    <img src= "globe-hands.png"  class="iconl">
-    <div class= "header">
-    <h1> ACE CLUB - About US </h1>
-  </div>
-    <ul class = "full-nav-list">
-        <li class = "nav">
-          <a href="AceClub.html" class = "but">Home</a>
+    <h1 class= "jumbotron text-center"> ACE CLUB - About US </h1>
+    <img src= "globe-hands.png" class="img-circle img-responsive iconr">
+    <img src= "globe-hands.png"  class="img-circle img-responsive iconl">
+    <nav class ="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+    <ul class = "nav navbar-nav">
+        <li>
+          <a href="AceClub.html">Home</a>
         </li>
-    	<li class = "nav">
-          <a href="aboutus.html" class = "but">About Us</a>
+    	<li class = "active">
+          <a href="aboutus.html">About Us</a>
         </li>
-    	<li class = "nav">
-          <a href="aceclub.html" class = "but">Resources</a>
-          <div class="dropcon">
-              <a href="lessonnplans.html">Lesson Plans</a>
-              <a href="otherresources.html">Other Resources</a>
-          </div>
+    	<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+              <li><a href="lessonnplans.html">Lesson Plans</a></li>
+              <li><a href="otherresources.html">Other Resources</a></li>
+          </ul>
+      </li>
+    	<li class = "dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos</a>
+          <ul class=dropdown-menu>
+              <li><a href="meetings.html">Meetings</a></li>
+              <li><a href="teaching.html">Teaching</a></li>
+          </ul>
         </li>
-    	<li class = "nav">
-          <a href="videos.html" class = "but">Videos</a>
-          <div class="dropcon">
-              <a href="meetings.html">Meetings</a>
-              <a href="teaching.html">Teaching</a>
-          </div>
+    	   <li>
+          <a href="ourteam.html">Our Team</a>
         </li>
-    	<li class = "nav">
-          <a href="ourteam.html" class = "but">Our Team</a>
+    	<li>
+          <a href="contactus.html">Contact Us</a>
         </li>
-    	<li class = "nav">
-          <a href="contactus.html" class = "but">Contact Us</a>
+    	<li class = "dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration</a>
+          <ul class="dropdown-menu">
+              <li><a href="organization.html">Organizations</a><li>
+              <li><a href="individuals.html">Individuals</a></li>
+          </ul>
         </li>
-    	<li class = "nav">
-          <a href="registration.html" class = "but">Registration</a>
-          <div class="dropcon">
-              <a href="organization.html">Organizations</a>
-              <a href="individuals.html">Individuals</a>
-          </div>
-        </li>
-    	<li class = "nav">
-          <a href="donation.html" class = "but">Donations</a>
+    	   <li>
+          <a href="donation.html">Donations</a>
         </li>
     	</ul>
+    </div>
+    </nav>
+      <h4 class="Mission_Head">OUR MISSION</h4>
+      <p class="mission"> We want to change this world - Change our future generation</p>
     <div class="video">
       <video id="real_vid">
         <source src= "ABOUTUS_VID.mp4" type="video/mp4">
@@ -76,13 +83,12 @@
       <p class = "answer"> We do this by going to the same 6 classes in each grade every month to teach a <br>
                           specific value. We use activities books and other resources to be able to do this. <br>
                            We also use kids who attend the club to help teach.</p>
-      <p class="questions"> Why we do it </p>
+      <p class="questions"> Why we do it?</p>
       <p class = "answer">We do this because we believe that it is very important for character valuest to be cultivated<br>
                           in young children from a very young age. These values will help the children for there whole<br>
                           life by making them well behaved in the long run.</p>
     </div>
-    <div class="table_date">
-      <table class="actual_table">
+      <table class="table-bordered">
         <tr >
           <th>Date</th>
           <th>Event</th>
@@ -119,6 +125,5 @@
           <td>Talked to Principal</td>
         </tr>
       </table>
-    </div>
         </body>
   </html>

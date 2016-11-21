@@ -1,0 +1,19 @@
+{
+  "name": "ace",
+  "version": "1.0.0",
+  "description": "WEBPAGE",
+  "main": "AceClub.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSai23/ACE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSai23/ACE/issues"
+  },
+  "homepage": "https://github.com/JSai23/ACE#readme"
+}
