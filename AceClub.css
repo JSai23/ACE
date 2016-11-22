@@ -28,11 +28,10 @@ background: white;
   
 }
 
-.carousel{
-	position: realtive;
-	z-index: -1;
-}
-
+.container-fluid{
+ 	position: relative;
+ 	z-index: -1;
+ }
 .picture{
   width:800px;
   height:400px;
