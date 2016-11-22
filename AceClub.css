@@ -27,6 +27,10 @@ background: white;
   background: linear-gradient(blue, lightgreen); /* Standard syntax */
   
 }
+.container-fluid{
+	position: relative;
+	z-index: -1;
+}
 
 .picture{
   width:800px;
