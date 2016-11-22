@@ -38,7 +38,7 @@ background: white;
   position: absolute;
   display: none;
   z-index: 1;
-  top:170px;
+  top:180px;
 }
 .team_pic:hover .text-area{
   display: block;
