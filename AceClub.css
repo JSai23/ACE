@@ -1,5 +1,8 @@
-body{
-background: white;
+html{
+  background: white;
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
 .img-circle{
@@ -19,30 +22,29 @@ background: white;
 .jumbotron{
   top:31px;
   position: relative;
-  z-index: 999;
+  z-index: 0;
   background: blue; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(blue, lightgreen); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(blue, lightgreen); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(blue, lightgreen); /* For Firefox 3.6 to 15 */
   background: linear-gradient(blue, lightgreen); /* Standard syntax */
-  
+
 }
 
 .carousel{
  	position: relative;
- 	z-index: -1;
  }
 .title{
 	position: relative;
-	z-index: 1000;
+	z-index: 1;
 }
 .picture{
   width:800px;
   height:400px;
   margin: auto;
 }
-
-.eventt {
-	background-color: gray;
-	border-style: double;
+#myCarousel{
+  top:200px;
+  left:200px;
+  position: absolute;
 }
