@@ -17,7 +17,7 @@ background: white;
   top: 70px;
 }
 .jumbotron{
-  top:1200px;
+  top:31px;
   position: relative;
   background: blue; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(blue, lightgreen); /* For Safari 5.1 to 6.0 */
