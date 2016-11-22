@@ -1,9 +1,7 @@
 body{
-  background: url("los-angeles-streets-at-night-wallpaper-1.jpg");
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-size: cover;
+background: white;
 }
+
 .img-circle{
   width: 90px;
   z-index: 1;
