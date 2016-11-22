@@ -39,6 +39,6 @@ background: white;
   position: relative;
   display: none;
 }
-.team_pic:hover{
+.team_pic:hover .text-area{
   display: block;
 }
