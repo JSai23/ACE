@@ -19,7 +19,7 @@ background: white;
 .jumbotron{
   top:31px;
   position: absolute;
-  z-index=1;
+  z-index:1;
   background: blue; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(blue, lightgreen); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(blue, lightgreen); /* For Opera 11.1 to 12.0 */
