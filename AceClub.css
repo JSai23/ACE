@@ -27,10 +27,6 @@ background: white;
   background: linear-gradient(blue, lightgreen); /* Standard syntax */
   
 }
-.title{
-	position: relative;
-	z-index: 999;
-}
 
 .container-fluid{
 	position: realtive;
