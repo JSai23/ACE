@@ -30,11 +30,7 @@ background: white;
 	position: relative;
 	z-index: 1;
 }
-.carousel{
-	position: relative;
-	z-index: -1;
-	top: 200px;
-}
+
 .container-fluid{
 	position: realtive;
 	z-index: -1;
