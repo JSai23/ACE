@@ -40,6 +40,6 @@ background: white;
   z-index: 1;
   top:70px;
 }
-img:hover .text-area{
+.team_pic:hover .text-area{
   display: block;
 }
