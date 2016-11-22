@@ -68,3 +68,9 @@ video{
   background-color: orange;
   padding: 5px;
 }
+.history-area{
+background-color: lightgreen;
+padding: 10px;
+text-align: center;
+line-height: 1.5;
+}
