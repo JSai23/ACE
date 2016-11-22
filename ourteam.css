@@ -34,7 +34,11 @@ background: white;
 .text-area{
   width:200px;
   height:200px;
-  background:blue;
+  background:lightblue;
   top:0;
   position: relative;
+  display: none;
+}
+.team_pic:hover{
+  display: block;
 }
