@@ -34,7 +34,7 @@ background: white;
 .text-area{
   width:200px;
   height:200px;
-  background:lightblue;
+  background: linear-gradient(yellow, lightgreen);
   position: absolute;
   display: none;
   z-index: 1;
