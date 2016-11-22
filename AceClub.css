@@ -28,7 +28,7 @@ background: white;
   
 }
 
-.container-fluid{
+.carousel{
 	position: realtive;
 	z-index: -1;
 }
