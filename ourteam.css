@@ -28,3 +28,13 @@ background: white;
   width: 200px;
   height: 200px;
 }
+.pic-hide{
+
+}
+.text-area{
+  width:200px;
+  height:200px;
+  background:blue;
+  top:0;
+  position: relative;
+}
