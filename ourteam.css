@@ -24,12 +24,9 @@ background: white;
   background: -moz-linear-gradient(blue, lightgreen); /* For Firefox 3.6 to 15 */
   background: linear-gradient(blue, lightgreen); /* Standard syntax */
 }
-.team_pic{
+.team_pic_img{
   width: 200px;
   height: 200px;
-}
-.pic-hide{
-
 }
 .text-area{
   width:200px;
@@ -37,9 +34,36 @@ background: white;
   background: linear-gradient(yellow, lightgreen);
   position: absolute;
   display: none;
-  z-index: 1;
-  top:185px;
+  top:0px;
+  -webkit-animation-name: text; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+  animation-name: text;
+  animation-duration: 6s;
 }
 .team_pic:hover .text-area{
   display: block;
+  animation-play-state: running;
+}
+.team_pic {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+  }
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes text {
+    0%   {transform:rotateY(0deg)}
+    25%  {transform:rotateY(90deg)}
+    50%  {transform:rotateY(180deg)}
+    75%  {transform:rotateY(270deg)}
+    100% {transform:rotateY(360deg)}
+}
+
+/* Standard syntax */
+@keyframes text {
+    0%   {transform:rotateY(0deg)}
+    25%  {transform:rotateY(90deg)}
+    50%  {transform:rotateY(180deg)}
+    75%  {transform:rotateY(270deg)}
+    100% {transform:rotateY(360deg)}
 }
