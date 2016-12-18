@@ -1,4 +1,4 @@
-modules.export = function(app, pasport){
+module.exports = function(app, pasport){
     app.get( '/', function( req, res ) {
     res.sendfile(__dirname + '/aboutus.html');
   });
@@ -13,7 +13,12 @@ modules.export = function(app, pasport){
   });
     app.get( '/logout', function( req, res ) {
     req.logout();
-    req.redirect('/');
+    res.redirect(__dirname + '/aboutus.html');
   });
 };
-app.listen('3000');
+function isLoggedIn(req, res, next){
+  if (req.isAuthenticated())
+    return next();
+
+    res.redirect(__dirname + '/sign_in.html');
+}

@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 //now database
-mongoose.connect(......);
+//mongoose.connect(......);
 //make all files static
 app.use(express.static(__dirname));
 //Parse cookies and body
@@ -19,8 +19,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //files
-require('/routes.js')(app, passport);
-require('/passport.js')(passport);
+require(__dirname + '/routes.js')(app, passport);
+//require('/passport.js')(passport);
 //Port
 console.log("Working Now");
 app.listen(3000);
