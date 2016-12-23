@@ -1,4 +1,4 @@
-module.exports = function(app, pasport){
+module.exports = function(app, passport){
     app.get( '/', function( req, res ) {
     res.sendfile(__dirname + '/aboutus.html');
   });
@@ -8,6 +8,11 @@ module.exports = function(app, pasport){
     app.get( '/login', function( req, res ) {
     res.sendfile(__dirname + '/sign_in.html');
   });
+  app.post('/registration', passport.authenticate('local-signup', {
+       successRedirect : '/welcome',
+       failureRedirect : '/registration',
+       failureFlash : true
+   }));
     app.get( '/welcome',isLoggedIn, function( req, res ) {
     res.sendfile(__dirname + '/welcome.html');
   });
