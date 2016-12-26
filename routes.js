@@ -3,10 +3,10 @@ module.exports = function(app, passport){
     res.sendfile(__dirname + '/aboutus.html');
   });
     app.get( '/registration', function( req, res ) {
-    res.sendfile(__dirname + '/registration.html');
+    res.render('registration.ejs', { message: req.flash('signupMessage') });
   });
     app.get( '/login', function( req, res ) {
-    res.sendfile(__dirname + '/sign_in.html');
+    res.render('sign_in.ejs', { message: req.flash('loginMessage') });
   });
   app.post('/login', passport.authenticate('local-login', {
        successRedirect : '/welcome',

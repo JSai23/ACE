@@ -37,6 +37,29 @@ module.exports = function(passport) {
         passReqToCallback : true // allows us to pass back the entire request to the callback
     },
     function(req, username, password, done) {
+
+      process.nextTick(function() {
+      User.findOne({ 'local.email' :  req.body.email }, function(err, user) {
+           // if there are any errors, return the error
+           if (err)
+               return done(err);
+
+           // check to see if theres already a user with that email
+           if (user)
+           {
+               return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
+           } else {
+      User.findOne({ 'local.username' :  username }, function(err, user) {
+                  // if there are any errors, return the error
+            if (err)
+                return done(err);
+
+            // check to see if theres already a user with that email
+            if (user)
+            {
+                return done(null, false, req.flash('signupMessage', 'That username is already taken.'));
+            } else {
+
                 var newUser            = new User();
 
                 // set the user's local credentials
@@ -51,7 +74,9 @@ module.exports = function(passport) {
                         throw err;
                     return done(null, newUser);
                 });
-
+              }});
+            }});
+          });
     }));
     passport.use('local-login', new LocalStrategy({
        passReqToCallback : true // allows us to pass back the entire request to the callback

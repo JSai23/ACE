@@ -14,6 +14,8 @@ app.use(express.static(__dirname));
 //Parse cookies and body
 app.use(cookieParser());
 app.use(bodyParser());
+app.set('views', __dirname)
+app.set('view engine', 'ejs');
 app.use(session({ secret: 'SAIRAM' }));
 app.use(passport.initialize());
 app.use(passport.session());
