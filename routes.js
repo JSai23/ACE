@@ -8,6 +8,11 @@ module.exports = function(app, passport){
     app.get( '/login', function( req, res ) {
     res.sendfile(__dirname + '/sign_in.html');
   });
+  app.post('/login', passport.authenticate('local-login', {
+       successRedirect : '/welcome',
+       failureRedirect : '/login',
+       failureFlash : true
+   }));
   app.post('/registration', passport.authenticate('local-signup', {
        successRedirect : '/welcome',
        failureRedirect : '/registration',
@@ -18,7 +23,7 @@ module.exports = function(app, passport){
   });
     app.get( '/logout', function( req, res ) {
     req.logout();
-    res.redirect(__dirname + '/aboutus.html');
+    res.redirect('/');
   });
 };
 function isLoggedIn(req, res, next){
