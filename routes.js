@@ -6,7 +6,7 @@ module.exports = function(app, passport){
     res.render('registration.ejs', { message: req.flash('signupMessage') });
   });
     app.get( '/login', function( req, res ) {
-    res.render('sign_in.ejs', { message: req.flash('loginMessage') });
+    res.render('sign_in.ejs', { message: req.flash('loginMessage'),  redirect: req.flash('unauthorized') });
   });
   app.post('/login', passport.authenticate('local-login', {
        successRedirect : '/welcome',
@@ -28,7 +28,8 @@ module.exports = function(app, passport){
 };
 function isLoggedIn(req, res, next){
   if (req.isAuthenticated())
-    return next();
+  {return next();}
 
-    res.redirect(__dirname + '/sign_in.html');
+    req.flash('unauthorized', 'You must be signed in or registered to view this page')
+    res.redirect('/login');
 }
