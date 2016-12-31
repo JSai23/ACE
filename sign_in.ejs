@@ -60,10 +60,10 @@
          Password: <input name="password" type="password" class="form-control"> </input> <br>
       </div>
       <button type="submit">Submit</button>
-      <% if (message.length > 0) { %>
-       <div class="alert alert-danger"><%= message %></div>
-       <% } %>
-       <% if (redirect.length > 0) { %>
-        <div class="alert alert-danger"><%= redirect %></div>
-        <% } %>
     </form>
+    <% if (message.length > 0) { %>
+     <div class="alert alert-danger"><%= message %></div>
+     <% } %>
+     <% if (redirect.length > 0) { %>
+      <div class="alert alert-danger"><%= redirect %></div>
+      <% } %>
