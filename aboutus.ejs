@@ -6,6 +6,13 @@
     <link rel="stylesheet" type="text/css" href="aboutus.css">
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    <% if (message.length > 0) { %>
+    $(document).ready(function () {
+    $("#the-toggle").click();
+    });
+    <% } %>
+    </script>
   </head>
   <body>
     <h1 class= "jumbotron text-center"> ACE CLUB - About US </h1>
@@ -15,43 +22,43 @@
     <div class="container-fluid">
     <ul class = "nav navbar-nav">
         <li>
-          <a href="AceClub.html">Home</a>
+          <a href="/">Home</a>
         </li>
     	<li class = "active">
-          <a href="aboutus.html">About Us</a>
+          <a href="/aboutus">About Us</a>
         </li>
     	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources</a>
           <ul class="dropdown-menu">
-              <li><a href="lessonnplans.html">Lesson Plans</a></li>
-              <li><a href="otherresources.html">Other Resources</a></li>
+              <li><a href="/lessons">Lesson Plans</a></li>
+              <li><a href="/otherresources">Other Resources</a></li>
           </ul>
       </li>
     	<li class = "dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos</a>
           <ul class=dropdown-menu>
-              <li><a href="meetings.html">Meetings</a></li>
-              <li><a href="teaching.html">Teaching</a></li>
+              <li><a href="/video_teach">Meetings</a></li>
+              <li><a href="/video_meeting">Teaching</a></li>
           </ul>
         </li>
     	   <li>
-          <a href="ourteam.html">Our Team</a>
+          <a href="/ourteam">Our Team</a>
         </li>
     	<li>
-          <a href="contactus.html">Contact Us</a>
+          <a href="/contactus">Contact Us</a>
         </li>
     	<li class = "dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration</a>
           <ul class="dropdown-menu">
-              <li><a href="sign_in.html">Organizations</a><li>
-              <li><a href="sign_in.html">Individuals</a></li>
+              <li><a href="/registration">Organizations</a><li>
+              <li><a href="/registration">Individuals</a></li>
           </ul>
         </li>
     	   <li>
-          <a href="donation.html">Donations</a>
+          <a href="/donations">Donations</a>
         </li>
         <li class = "dropdown" id="login-list">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="the-toggle">Sign in</a>
             <ul class="dropdown-menu pull-right" id="form-drop">
                 <li>
                    <form method="post" action="/login" id="login-form">
@@ -61,6 +68,9 @@
                      <div class="form-group">
                        Password: <input name="password" type="password" class="form-control"> </input> <br>
                     </div>
+                    <% if (message.length > 0) { %>
+                     <div class="alert alert-danger"><%= message %></div>
+                     <% } %>
                     <button type="submit">Submit</button>
                   </form>
                 </li>

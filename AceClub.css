@@ -1,10 +1,15 @@
-html{
-  background: white;
-  overflow: auto;
-  margin: 0px;
-  padding: 0px;
+body{
+background: white;
 }
-
+.jumbotron{
+  top:31px;
+  position: relative;
+  background: blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(blue, lightgreen); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(blue, lightgreen); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(blue, lightgreen); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(blue, lightgreen); /* Standard syntax */
+}
 .img-circle{
   width: 90px;
   z-index: 1;
@@ -16,35 +21,31 @@ html{
 }
 .iconl{
   position: absolute;
-  left:7px;
+  left:0px;
   top: 70px;
 }
-.jumbotron{
-  top:31px;
-  position: relative;
-  z-index: 0;
-  background: blue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(blue, lightgreen); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(blue, lightgreen); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(blue, lightgreen); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(blue, lightgreen); /* Standard syntax */
-
+#form-drop{
+  position: absolute;
+  width:300px;
 }
-
-.carousel{
- 	position: relative;
- }
-.title{
-	position: relative;
-	z-index: 1;
+#login-form{
+  padding:20px;
 }
-.picture{
-  width:800px;
-  height:400px;
+#login-list{
+  position: absolute;
+  right: 0px;
+}
+#slide_pic{
+  width: 1360px;
+  height: 485px;
   margin: auto;
 }
-#myCarousel{
-  top:200px;
-  left:200px;
-  position: absolute;
+#carousel-example-generic{
+  width: 1360px;
+  margin:auto;
 }
+.but{
+  width: 100px;
+}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}

@@ -1,6 +1,6 @@
 module.exports = function(app, passport){
     app.get( '/', function( req, res ) {
-    res.sendfile(__dirname + '/AceClub.html');
+    res.render('AceClub.ejs',  { message: req.flash('loginMessage'),  redirect: req.flash('unauthorized') });
   });
     app.get( '/registration', function( req, res ) {
     res.render('registration.ejs', { message: req.flash('signupMessage') });
@@ -10,7 +10,7 @@ module.exports = function(app, passport){
   });
   app.post('/login', passport.authenticate('local-login', {
        successRedirect : '/welcome',
-       failureRedirect : '/login',
+       failureRedirect : 'back',
        failureFlash : true
    }));
   app.post('/registration', passport.authenticate('local-signup', {
@@ -29,7 +29,7 @@ module.exports = function(app, passport){
   res.sendfile(__dirname + '/ourteam.html');
 });
 app.get( '/aboutus', function( req, res ) {
-res.sendfile(__dirname + '/aboutus.html');
+res.render('aboutus.ejs', {message: req.flash('loginMessage')});
 });
 app.get( '/contactus', function( req, res ) {
 res.sendfile(__dirname + '/contactus.html');
