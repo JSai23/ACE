@@ -7,8 +7,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var configDB = require('./database.js');
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+          user: 'jsaivarahi@gmail.com', // Your email id
+          pass: 'Sai2314108' // Your password
+      }
+  });
 //now database
-mongoose.connect(configDB.url);
+mongoose.connect(configDB.url, function(err){if (err) console.log(err);});
 //make all files static
 app.use(express.static(__dirname));
 //Parse cookies and body
@@ -24,8 +32,8 @@ app.use(flash());
 
 
 //files
-require('./routes.js')(app, passport);
-require('./passport.js')(passport);
+require('./routes.js')(app, passport, transporter);
+require('./passport.js')(passport, nodemailer, transporter);
 //Port
 console.log("Working Now");
 app.listen(3000);

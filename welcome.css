@@ -21,3 +21,14 @@
   left:0px;
   top: 70px;
 }
+#form-drop{
+  position: absolute;
+  width:300px;
+}
+#login-form{
+  padding:20px;
+}
+#login-list{
+  position: absolute;
+  right: 0px;
+}

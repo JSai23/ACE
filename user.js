@@ -7,7 +7,11 @@ var userSchema = mongoose.Schema({
     namel: String,
     username: String,
     email : String,
-    password: String
+    password: String,
+    verified: Boolean,
+    id: String,
+    link: String,
+    organization: String
   }
 });
 userSchema.methods.generateHash = function(password) {

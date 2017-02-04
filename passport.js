@@ -4,10 +4,10 @@
 var LocalStrategy   = require('passport-local').Strategy;
 
 // load up the user model
-var User            = require('./user');
+var User            = require('./user.js');
 
 // expose this function to our app using module.exports
-module.exports = function(passport) {
+module.exports = function(passport, nodemailer, transporter) {
 
     // =========================================================================
     // passport session setup ==================================================
@@ -37,7 +37,7 @@ module.exports = function(passport) {
         passReqToCallback : true // allows us to pass back the entire request to the callback
     },
     function(req, username, password, done) {
-
+      var link;
       process.nextTick(function() {
       User.findOne({ 'local.email' :  req.body.email }, function(err, user) {
            // if there are any errors, return the error
@@ -61,6 +61,8 @@ module.exports = function(passport) {
             } else {
 
                 var newUser            = new User();
+                var rand = Math.floor((Math.random() * 100) + 54).toString(); //the random
+                link="http://"+req.get('host')+"/verify?id="+rand;
 
                 // set the user's local credentials
                 newUser.local.username = req.body.username;
@@ -68,15 +70,40 @@ module.exports = function(passport) {
                 newUser.local.email    = req.body.email;
                 newUser.local.namef    = req.body.f_name;
                 newUser.local.namel    = req.body.l_name;
+                newUser.local.id = rand;
+                newUser.local.verified = false;
+                newUser.local.link = link;
+                if (req.url == '/registration-org')
+                {
+                  newUser.local.organization = req.body.org;
+                }
+                else
+                {
+                  newUser.local.organization = 'personal';
+                }
                 // save the user
                 newUser.save(function(err) {
                     if (err)
                         throw err;
-                    return done(null, newUser);
+                    return done(null, false)
+                });
+                var mailOptions = {
+                    from: 'jsaivarahi@gmail.com',
+                    to: req.body.email,
+                    subject: req.body.subject,
+                    html: "<a href="+link+"> Click the link to verify</a><br>"+link+"<br>"
+                };
+                transporter.sendMail(mailOptions, function(error, info){
+                    if(error){
+                        console.log(error);
+                    }else{
+                        console.log('Message sent: ' + info.response);
+                    };
                 });
               }});
             }});
           });
+
     }));
     passport.use('local-login', new LocalStrategy({
        passReqToCallback : true // allows us to pass back the entire request to the callback
@@ -98,6 +125,10 @@ module.exports = function(passport) {
            if (!user.validPassword(password))
                return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.')); // create the loginMessage and save it to session as flashdata
 
+          if(!user.local.verified)
+                {
+                  return done(null, false, req.flash('loginMessage', 'You did not verify your email')); //if email is verified
+                }
            // all is well, return successful user
            return done(null, user);
        });

@@ -30,7 +30,7 @@
     	<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources</a>
           <ul class="dropdown-menu">
-              <li><a href="/lessons">Lesson Plans</a></li>
+              <li><a href="/lesson">Lesson Plans</a></li>
               <li><a href="/otherresources">Other Resources</a></li>
           </ul>
       </li>
@@ -41,22 +41,21 @@
               <li><a href="/video_meeting">Teaching</a></li>
           </ul>
         </li>
-    	   <li>
-          <a href="/ourteam">Our Team</a>
-        </li>
     	<li>
           <a href="/contactus">Contact Us</a>
         </li>
     	<li class = "dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration</a>
           <ul class="dropdown-menu">
-              <li><a href="/registration">Organizations</a><li>
+              <li><a href="/registration-org">Organizations</a><li>
               <li><a href="/registration">Individuals</a></li>
           </ul>
         </li>
-    	   <li>
-          <a href="/donations">Donations</a>
-        </li>
+        <% if (user) { %>
+          <li id="login-list">
+              <a href="/logout">Logout</a>
+            </li>
+            <% } else {%>
         <li class = "dropdown" id="login-list">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="the-toggle">Sign in</a>
             <ul class="dropdown-menu pull-right" id="form-drop">
@@ -76,6 +75,7 @@
                 </li>
             </ul>
           </li>
+          <% } %>
     	</ul>
     </div>
     </nav>
