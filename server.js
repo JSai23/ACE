@@ -18,10 +18,9 @@ var transporter = nodemailer.createTransport({
 //now database
 mongoose.connect(configDB.url, function(err){if (err) console.log(err);});
 //Parse cookies and body
-app.use(express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules/jquery/dist'));
-app.use(express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use(cookieParser());
 app.use(bodyParser());
 app.set('view engine', 'ejs');
