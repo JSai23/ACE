@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port     = process.env.PORT || 8080;
+var port     = process.env.PORT || 3000;
 var flash = require('connect-flash');
 var passport = require('passport');
 var mongoose = require('mongoose');
