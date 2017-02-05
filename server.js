@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var port     = process.env.PORT || 8080;
 var flash = require('connect-flash');
 var passport = require('passport');
 var mongoose = require('mongoose');
@@ -36,4 +37,4 @@ require('./backend/routes.js')(app, passport, transporter);
 require('./backend/passport.js')(passport, nodemailer, transporter);
 //Port
 console.log("Working Now");
-app.listen(3000);
+app.listen(port);
