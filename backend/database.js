@@ -1,5 +1,5 @@
 module.exports = {
 
-    'url' : 'mongodb://127.0.0.1/ACE_DB' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
+    'url' : 'mongodb://JSai:sssaaaiii@ds143539.mlab.com:43539/ace_db' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
 
 };
