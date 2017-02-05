@@ -2,10 +2,10 @@
 <html>
   <head>
     <title> ABOUT US</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="aboutus.css">
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/aboutus.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
     <script type="text/javascript">
     <% if (message.length > 0) { %>
     $(document).ready(function () {
@@ -16,8 +16,8 @@
   </head>
   <body>
     <h1 class= "jumbotron text-center"> ACE CLUB - About US </h1>
-    <img src= "globe-hands.png" class="img-circle img-responsive iconr">
-    <img src= "globe-hands.png"  class="img-circle img-responsive iconl">
+    <img src= "/resources/pics/globe-hands.png" class="img-circle img-responsive iconr">
+    <img src= "/resources/pics/globe-hands.png"  class="img-circle img-responsive iconl">
     <nav class ="navbar navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
     <ul class = "nav navbar-nav">
@@ -85,7 +85,7 @@
     </div>
     <div class="video">
       <video id="real_vid">
-        <source src= "ABOUTUS_VID.mp4" type="video/mp4">
+        <source src= "/resources/pics/ABOUTUS_VID.mp4" type="video/mp4">
         DOES NOT WORK
       </video>
       <button id="buttonl" onclick="playvid()" type="button">Play Video</button>

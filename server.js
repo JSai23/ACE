@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var configDB = require('./database.js');
+var configDB = require('./backend/database.js');
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
       service: 'Gmail',
@@ -17,12 +17,13 @@ var transporter = nodemailer.createTransport({
   });
 //now database
 mongoose.connect(configDB.url, function(err){if (err) console.log(err);});
-//make all files static
-app.use(express.static(__dirname));
 //Parse cookies and body
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/node_modules/jquery/dist'));
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use(cookieParser());
 app.use(bodyParser());
-app.set('views', __dirname)
 app.set('view engine', 'ejs');
 app.use(session({ secret: 'SAIRAM' }));
 app.use(passport.initialize());
@@ -32,8 +33,8 @@ app.use(flash());
 
 
 //files
-require('./routes.js')(app, passport, transporter);
-require('./passport.js')(passport, nodemailer, transporter);
+require('./backend/routes.js')(app, passport, transporter);
+require('./backend/passport.js')(passport, nodemailer, transporter);
 //Port
 console.log("Working Now");
 app.listen(3000);

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title> ABOUT US</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="lessonplan.css">
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/contactus.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
     <script type="text/javascript">
     <% if (message.length > 0) { %>
     $(document).ready(function () {
@@ -15,9 +14,9 @@
     </script>
   </head>
   <body>
-    <h1 class= "jumbotron text-center"> ACE CLUB - Lesson Plans </h1>
-    <img src= "globe-hands.png" class="img-circle img-responsive iconr">
-    <img src= "globe-hands.png"  class="img-circle img-responsive iconl">
+    <h1 class= "jumbotron text-center"> ACE CLUB - Contact Us </h1>
+    <img src= "/resources/pics/globe-hands.png" class="img-circle img-responsive iconr">
+    <img src= "/resources/pics/globe-hands.png"  class="img-circle img-responsive iconl">
     <nav class ="navbar navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
     <ul class = "nav navbar-nav">
@@ -79,38 +78,17 @@
       </ul>
     </div>
     </nav>
-
-    <div class="container pdfc">
-    <h3> PDFS </h3>
-    <h6> Caring </h6>
-    <a  href="/Lessons/ACECLUBCARING.pdf" download>
-      <img class="pdf" src="Lessons/pdf.png">
-    </a>
-    <h6> Kindness </h6>
-    <a  href="Lessons/Aceclublesson1.pdf" download>
-      <img class="pdf" src="Lessons/pdf.png">
-    </a>
-    <h6> Self-Confidence </h6>
-    <a  href="Lessons/AceClubLesson2.pdf" download>
-      <img class="pdf" src="Lessons/pdf.png">
-    </a>
-  </div>
-
-  <div class="container word">
-    <h3>Word Documents</h3>
-  <h6> Caring </h6>
-  <a  href="Lessons/ACECLUBCARING.docx" download>
-    <img class="pdf" src="Lessons/word.png">
-  </a>
-  <h6> Kindness </h6>
-  <a  href="Lessons/Aceclublesson1.docx" download>
-    <img class="pdf" src="Lessons/word.png">
-  </a>
-  <h6> Self-Confidence </h6>
-  <a  href="Lessons/AceClubLesson2.docx" download>
-    <img class="pdf" src="Lessons/word.png">
-  </a>
-</div>
+    <form method="post" action="/contactus">
+       <div class="form-group">
+        Subject: <input name="subject" type="text" class="form-control"> </input> <br>
+      </div>
+       <div class="form-group">
+         Your Email: <input name="email" type="email" class="form-control"></input> <br>
+      </div>
+       <div class="form-group">
+        Message: <input name="message" type="text" class="form-control"></input> <br>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
 
 </body>
-</html>
