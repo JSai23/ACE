@@ -5,7 +5,7 @@ module.exports = function(app, passport, transporter){
   res.render('AceClub.ejs',  { message: req.flash('loginMessage'),  redirect: req.flash('unauthorized'), user: req.user });
 });
   app.get( '/registration', function( req, res ) {
-  res.render('registration.ejs', { message: req.flash('signupMessage'),message: req.flash('loginMessage'),  redirect: req.flash('unauthorized'), user: req.user });
+  res.render('registration.ejs', { message1: req.flash('signupMessage'), message: req.flash('loginMessage'),  redirect: req.flash('unauthorized'), user: req.user });
 });
 app.get( '/registration-org', function( req, res ) {
 res.render('registration-org.ejs', { message: req.flash('signupMessage'), message: req.flash('loginMessage'), redirect: req.flash('unauthorized'), user: req.user });

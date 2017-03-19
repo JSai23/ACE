@@ -85,7 +85,7 @@ module.exports = function(passport, nodemailer, transporter) {
                 newUser.save(function(err) {
                     if (err)
                         throw err;
-                    return done(null, false)
+                    return done(null, false, req.flash('signupMessage', 'Please click the link that was sent to your email, and then relogin.'));
                 });
                 var mailOptions = {
                     from: 'jsaivarahi@gmail.com',
